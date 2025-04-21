@@ -8,7 +8,7 @@ function App() {
   const refArr = useRef([]);
 
   const handleChange = (value, index) => {
-    console.log(value);
+    if(isNaN(value)) return;
     const newVal = value.trim();
     const newArr = [...intputArr];
     newArr[index] = newVal.slice(-1);
